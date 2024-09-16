@@ -72,7 +72,7 @@ function checkCollision(obstacleHitbox) {
         carRect.height + carRect.top > obstacleRect.top
     ) {
         isGameOver = true;
-        alert('Game Over! Tap to restart.');
+        alert('Game Over! Tap to restart. The game gets faster after every restart and idk why tf does that happen, refresh the page to start from beginning.');
         restartGame();
     }
 }
