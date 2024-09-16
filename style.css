@@ -34,6 +34,8 @@ body, html {
     background-image: url('images/papya1.png');
     background-size: cover;
     background-repeat: no-repeat;
+    margin-bottom: 200px;
+}
 }
 
 .hitbox {
