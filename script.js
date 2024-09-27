@@ -72,27 +72,14 @@ function checkCollision(obstacleHitbox) {
         carRect.height + carRect.top > obstacleRect.top
     ) {
         isGameOver = true;
-        alert('Game Over! Tap to restart. The game gets faster after every restart and idk why tf does that happen, refresh the page to start from beginning.');
-        restartGame();
+        alert('Game Over! ');
+        window.location.href = 'game.html'; // Redirect to another webpage after collision
     }
 }
 
 function increaseScore() {
     score += 1;
     scoreElement.innerText = `Score: ${score}`;
-}
-
-function restartGame() {
-    carPositionX = road.offsetWidth / 2 - car.offsetWidth / 2;
-    car.style.left = `${carPositionX}px`;
-
-    positionObstacles(); // Reposition obstacles
-    obstacleSpeed = 5; // Reset obstacle speed to default
-    score = 0;
-    scoreElement.innerText = `Score: ${score}`;
-
-    isGameOver = false;
-    moveObstacles(); // Restart obstacle movement
 }
 
 // Move car on swipe or touch
